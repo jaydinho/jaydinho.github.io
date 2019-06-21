@@ -32,9 +32,9 @@ let stay = false;
 //HTML elements
 let topSection = document.getElementById("top-section");
 let versus = document.getElementById("vs");
-let startButton = document.getElementById("start");
-let hitButton = document.getElementById("hit");
-let stayButton = document.getElementById("stay");
+let startButton = document.getElementById("start-button");
+let hitButton = document.getElementById("hit-button");
+let stayButton = document.getElementById("stay-button");
 
 //Player HTML elements
 let playerContainer = document.getElementById("player-container");
