@@ -31,7 +31,7 @@ let stay = false;
 
 //HTML elements
 let topSection = document.getElementById("top-section");
-let versus = document.getElementById("versus");
+let versus = document.getElementById("vs");
 let startButton = document.getElementById("start");
 let hitButton = document.getElementById("hit");
 let stayButton = document.getElementById("stay");
