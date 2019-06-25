@@ -145,8 +145,6 @@ function newGamePageDisplay() {
     playerContainer.style.display = "block";
     versus.style.display = "block";
     dealerContainer.style.display = "block";
-    dealerCardImageOne.style.display = "none";
-    dealerCardImageTwo.style.display = "none";
 }
 
 //Updates cards and scores
