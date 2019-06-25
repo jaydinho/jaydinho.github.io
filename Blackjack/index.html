@@ -2,28 +2,41 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
+    <h1 id="main-heading">Blackjack</h1> 
+    <h2 id="sub-heading">Dealer must draw to 16 and stand on 17</h2> 
+
     <div id="main-container">
-        <h1 id="top-section">Welcome to Blackjack!</h1>
         <div id="game-container">
+            <p id="player-card-names"></p>
             <div id="player-container">
                 <h1>Player</h1> 
-                <p id="player-cards"></p>
-                <p id="player-score"></p>
+                <div id="player-card-images"></div>
+                <div id="player-score" class="score"></div>
             </div>
-            <h2 id="vs">VS</h2>
+        
+            <p id="vs">VS</p>
+
             <div id="dealer-container">
                 <h1>Dealer</h1>
-                <p id="dealer-card-one"></p>
-                <p id="dealer-card-two"></p>
-                <p id="dealer-score"></p>
+
+                <div id="dealer-card-images"></div>
+                <div id="dealer-card-images-original">
+                    <img id="dealer-card-image-one" src="">
+                    <img id="dealer-card-image-two" src="Images/CardBack.png">
+                </div>    
+                <div id="dealer-score" class="score"></div>
             </div>
+            <p id="dealer-card-names"></p>
+            <p id="dealer-card-one"></p>
+            <p id="dealer-card-two"></p>
         </div>
         
         <div id="button-container">
-            <button id="start-button" class="button">New Game</button>
-            <button id="hit-button" class="button">Hit</button>
-            <button id="stay-button" class="button">Stay</button>
-        </div>    
+            <button id="start-button" class="button">NEW GAME</button>
+            <button id="hit-button" class="button">HIT</button>
+            <button id="stay-button" class="button">STAY</button>
+        </div>   
+        <p id="game-status">Welcome to Blackjack!</p> 
     </div>
 
     <script src="index.js"></script>

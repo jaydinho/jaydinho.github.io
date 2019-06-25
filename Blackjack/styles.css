@@ -1,15 +1,39 @@
+/* Main tags */
 body {
     font-family: sans-serif;
     font-size: 16px;
+    color: white;
+    background-color: #08731C;
 }
 
-h2 {
-    margin: 10px;
+p {
+    margin: 0;
 }
 
-/* Page display */
+/* Blackjack heading */
+#main-heading {
+    height: 10vh;
+    font-size: 48px;
+    text-align: center;
+    margin: auto;
+    margin-top: 20px;
+}
+
+/* Dealer rules */
+#sub-heading {
+    width: 50%;
+    font-size: 32px;
+    color: yellow;
+    border: 6px white solid;
+    border-radius: 4px;
+    text-align: center;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Page display using flexbox*/
 #main-container {
-    height: 100vh;
+    height: 70vh;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -41,6 +65,13 @@ h2 {
     justify-content: center;
 }
 
+#dealer-card-images-original {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 #button-container {
     display: flex;
     flex-direction: row;
@@ -50,17 +81,43 @@ h2 {
 
 /* Button styling */
 .button {
-    border: 2px blue solid;
-    color: blue;
+    border: 6px #731C08 solid;
+    color: 731C08;
+    background-color: white;
     font-family: sans-serif;
-    font-size: 16px;
-    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
     outline: none;
-    padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
 }
 
 .button:hover {
-    transform: scale(1.01, 1.01);
+    transform: scale(1.02, 1.02);
+}
+
+/* Card images */
+img {
+    height: 225px;
+    width: 150px;
+}
+
+/* VS sign */
+#vs {
+    margin: 60px 10px 10px 10px;
+}
+
+.score {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+/* Game status */
+#game-status {
+    margin-top: 20px;
+    height: 10%;
+    font-size: 48px;
 }

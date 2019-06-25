@@ -30,7 +30,7 @@ let dealerScore;
 let stay = false;
 
 //HTML elements
-let topSection = document.getElementById("top-section");
+let topSection = document.getElementById("game-status");
 let versus = document.getElementById("vs");
 let startButton = document.getElementById("start-button");
 let hitButton = document.getElementById("hit-button");
@@ -38,13 +38,17 @@ let stayButton = document.getElementById("stay-button");
 
 //Player HTML elements
 let playerContainer = document.getElementById("player-container");
-let playerCardsContainer = document.getElementById("player-cards");
+let playerCardsContainer = document.getElementById("player-card-names");
+let playerCardsImagesContainer = document.getElementById("player-card-images");
 let playerScoreContainer = document.getElementById("player-score");
 
 //Dealer HTML elements
 let dealerContainer = document.getElementById("dealer-container");
+let dealerCardsImagesContainer = document.getElementById("dealer-card-images");
 let dealerCardOneContainer = document.getElementById("dealer-card-one");
 let dealerCardTwoContainer = document.getElementById("dealer-card-two");
+let dealerCardImageOne = document.getElementById("dealer-card-image-one");
+let dealerCardImageTwo = document.getElementById("dealer-card-image-two");
 let dealerScoreContainer = document.getElementById("dealer-score");
 
 //Hidden elements on page load
@@ -61,7 +65,8 @@ function createDeck() {
         for (let j = 0; j < values.length; j++) {
             let card = {
                 value: values[j],
-                suit: suits[i] 
+                suit: suits[i],
+                imageSRC: values[j] + suits[i] 
             };
             deck.push(card);
         }
@@ -118,10 +123,12 @@ startButton.addEventListener("click", function() {
     deck = createDeck();
     shuffledDeck = shuffleDeck();
     playerCards = [getNextCard(), getNextCard()];
+    playerCardImagesDisplay();
     nonAceScorePlayer = getScore(playerCards);
     aceScorePlayer = getAceScore(playerCards);
     playerScoreDisplay();
     dealerCards = [getNextCard(), getNextCard()];
+    dealerCardImagesDisplay();
     nonAceScoreDealer = getScore(dealerCards);
     aceScoreDealer = getAceScore(dealerCards);
     dealerScoreDisplay();
@@ -132,7 +139,7 @@ startButton.addEventListener("click", function() {
 //Changes display on game start
 function newGamePageDisplay() {
     startButton.style.display = "none";
-    topSection.style.display = "none";
+    topSection.innerHTML = "";
     hitButton.style.display = "inline";
     stayButton.style.display = "inline";
     playerContainer.style.display = "block";
@@ -145,8 +152,40 @@ function updateCardsAndScores() {
     playerCardsContainer.innerText = playerCardDisplay();
     playerScoreContainer.innerText = 'Player Score: ' + playerScore;
     dealerCardOneContainer.innerText = getCardString(dealerCards[0]);
-    dealerCardTwoContainer.innerText = '???'
-    dealerScoreContainer.innerText = 'Dealer Score: ???';
+    dealerCardTwoContainer.innerText = '?'
+    dealerScoreContainer.innerText = 'Dealer Score: ?';
+}
+
+//Update player card images
+function playerCardImagesDisplay() {
+    playerCardsImagesContainer.innerHTML = "";
+    for (i = 0; i < playerCards.length; i++) {
+            var image = document.createElement("img");
+            image.src = "Images/" + playerCards[i].imageSRC + ".png";
+            playerCardsImagesContainer.appendChild(image);
+        }
+    return playerCardsImagesContainer;
+}
+
+//Update dealer card images
+function dealerCardImagesDisplay() {
+        if (stay == false) {
+            dealerCardsImagesContainer.innerHTML = "";
+            dealerCardImageOne.src = "Images/" + dealerCards[0].imageSRC + ".png";
+            dealerCardImageOne.style.display = "block";
+            dealerCardImageTwo.style.display = "block";
+        }
+            else {
+                dealerCardsImagesContainer.innerHTML = "";
+                dealerCardImageOne.style.display = "none";
+                dealerCardImageTwo.style.display = "none";
+                for (i = 0; i < dealerCards.length; i++) {
+                    var image = document.createElement("img");
+                    image.src = "Images/" + dealerCards[i].imageSRC + ".png";
+                    dealerCardsImagesContainer.appendChild(image);
+        }
+    }
+    return dealerCardsImagesContainer;
 }
 
 //Calculates player score
@@ -239,6 +278,7 @@ function getAceScore(cards) {
 //Hit button
 hitButton.addEventListener("click", function() {
     playerCards.push(getNextCard());
+    playerCardImagesDisplay();
     nonAceScorePlayer = getScore(playerCards);
     aceScorePlayer = getAceScore(playerCards);
     playerScoreDisplay();
@@ -253,6 +293,7 @@ stayButton.addEventListener("click", function() {
         aceScorePlayer = getAceScore(playerCards);
         playerScoreDisplay();
         addDealerCard();
+        dealerCardImagesDisplay();
         dealerScoreDisplay();    
         updateCardsAndScores();
         dealerScoreContainer.innerText = 'Dealer Score: ' + dealerScore;
