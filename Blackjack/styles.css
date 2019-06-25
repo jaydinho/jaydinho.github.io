@@ -6,6 +6,10 @@ body {
     background-color: #08731C;
 }
 
+h1 {
+    margin: 10px 0;
+}
+
 p {
     margin: 0;
 }
@@ -88,10 +92,10 @@ p {
     font-size: 18px;
     font-weight: 600;
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     outline: none;
-    margin: 10px;
+    margin: 10px 10px 0 10px;
     cursor: pointer;
 }
 
@@ -117,7 +121,8 @@ img {
 
 /* Game status */
 #game-status {
-    margin-top: 20px;
-    height: 10%;
-    font-size: 48px;
+    margin: 10px 0 0 0;
+    height: 8%;
+    font-size: 32px;
+    color: yellow;
 }

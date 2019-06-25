@@ -316,7 +316,7 @@ function addDealerCard() {
 function gameOver() {
     if (playerScore > 21) {
         endGamePageDisplay();
-        topSection.innerText = "Bust - Game Over";
+        topSection.innerText = "Bust - Game Over!";
     }
 }
 
@@ -327,7 +327,7 @@ function gameWinner() {
         endGamePageDisplay();
     }
         else if (dealerScore > playerScore) {
-            topSection.innerText = "Dealer wins";
+            topSection.innerText = "Dealer wins!";
             endGamePageDisplay();
         }
 
@@ -336,7 +336,7 @@ function gameWinner() {
             endGamePageDisplay();
         }
         else {
-            topSection.innerText = "Push";
+            topSection.innerText = "Push!";
             endGamePageDisplay(); 
         }
 }
