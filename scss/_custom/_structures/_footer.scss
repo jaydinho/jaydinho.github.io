@@ -1,0 +1,32 @@
+.footer {
+    height: 40%;
+    width: 100%;
+    text-align: center;
+    background-color: #043d5d;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer__contact {
+    border-radius: 8px;
+    width: 80%;
+    height: 30vh;
+    margin: 20px;
+    margin-bottom: -15vh;
+  }
+  
+  .contact__text {
+    width: auto;
+  }
+  
+  .footer .button-one {
+    margin: 0 15px;
+  }
+  
+  .footer__links {
+    bottom: 0;
+  }
+
+  .footer__link {
+    padding: 4px;
+  }
