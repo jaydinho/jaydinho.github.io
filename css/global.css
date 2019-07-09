@@ -656,20 +656,19 @@ ul {
   .project-tile {
     width: 286px;
   }
+  .project-tile img {
+    border-radius: 4px 4px 0 0;
+    background-color: black;
+    max-width: 100%;
+    display: block;
+    height: auto;
+  }
 }
 
 .project-tile:hover {
   -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
           box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   cursor: pointer;
-}
-
-.project-tile img {
-  border-radius: 4px 4px 0 0;
-  background-color: black;
-  max-width: 100%;
-  display: block;
-  height: auto;
 }
 
 .project-tile-text {
