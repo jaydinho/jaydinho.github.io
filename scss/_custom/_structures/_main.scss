@@ -199,6 +199,14 @@
     color: black;
     margin: 20px 0 0 0;
     width: 200px;
+
+    img {
+      border-radius: 4px 4px 0 0;
+      background-color: black;
+      max-width: 100%;
+      display: block;
+      height: auto;
+    }
   }
   
   @media (min-width: 768px) {
@@ -210,14 +218,6 @@
   @media (min-width: 1024px) {
     .project-tile {
       width: 286px;
-
-      img {
-        border-radius: 4px 4px 0 0;
-        background-color: black;
-        max-width: 100%;
-        display: block;
-        height: auto;
-      }
     }
   }
   

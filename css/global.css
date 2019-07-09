@@ -425,7 +425,7 @@ template {
 }
 
 .footer__links {
-  bottom: 0;
+  margin: 10px;
 }
 
 .footer__link {
@@ -646,6 +646,14 @@ ul {
   width: 200px;
 }
 
+.project-tile img {
+  border-radius: 4px 4px 0 0;
+  background-color: black;
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
 @media (min-width: 768px) {
   .project-tile {
     width: 180px;
@@ -655,13 +663,6 @@ ul {
 @media (min-width: 1024px) {
   .project-tile {
     width: 286px;
-  }
-  .project-tile img {
-    border-radius: 4px 4px 0 0;
-    background-color: black;
-    max-width: 100%;
-    display: block;
-    height: auto;
   }
 }
 
