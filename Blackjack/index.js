@@ -161,7 +161,7 @@ function playerCardImagesDisplay() {
     playerCardsImagesContainer.innerHTML = "";
     for (i = 0; i < playerCards.length; i++) {
             var image = document.createElement("img");
-            image.src = "Images/" + playerCards[i].imageSRC + ".png";
+            image.src = "images/" + playerCards[i].imageSRC + ".png";
             playerCardsImagesContainer.appendChild(image);
         }
     return playerCardsImagesContainer;
@@ -171,7 +171,7 @@ function playerCardImagesDisplay() {
 function dealerCardImagesDisplay() {
         if (stay == false) {
             dealerCardsImagesContainer.innerHTML = "";
-            dealerCardImageOne.src = "Images/" + dealerCards[0].imageSRC + ".png";
+            dealerCardImageOne.src = "images/" + dealerCards[0].imageSRC + ".png";
             dealerCardImageOne.style.display = "block";
             dealerCardImageTwo.style.display = "block";
         }
@@ -181,7 +181,7 @@ function dealerCardImagesDisplay() {
                 dealerCardImageTwo.style.display = "none";
                 for (i = 0; i < dealerCards.length; i++) {
                     var image = document.createElement("img");
-                    image.src = "Images/" + dealerCards[i].imageSRC + ".png";
+                    image.src = "images/" + dealerCards[i].imageSRC + ".png";
                     dealerCardsImagesContainer.appendChild(image);
         }
     }
