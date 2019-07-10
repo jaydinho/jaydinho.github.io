@@ -7,7 +7,7 @@
     width: 200px;
     height: 160px;
     border-radius: 8px;
-    background-color: black;
+    background-color: $color-black;
     margin: 20px 0;
 
     img,
@@ -78,7 +78,7 @@
 
   .project-tile-text {
     position: absolute;
-    color: white;
+    color: $color-white;
     font-size: 12px;
     top: 50%;
     left: 50%;
@@ -108,9 +108,9 @@
       margin: 57px 0 0 12px;
       padding: 10px;
       font-size: 22px;
-      border: 3px white solid;
+      border: 3px $color-white solid;
       border-radius: 8px;
-      color: white;
+      color: $color-white;
       transform: rotate(-35deg);
     }
 
