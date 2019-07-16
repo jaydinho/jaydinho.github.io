@@ -336,7 +336,7 @@ template {
   display: none;
 }
 
-/* Flexbox */
+/* flexbox */
 .flex--column {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -409,8 +409,7 @@ li {
 }
 
 .button:hover {
-  -webkit-transform: scale(1.02, 1.02);
-          transform: scale(1.02, 1.02);
+  background-color: #3b8056;
 }
 
 .button--one {
