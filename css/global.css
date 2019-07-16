@@ -400,16 +400,17 @@ li {
   outline: none;
   font-size: 16px;
   font-weight: 300;
-  padding: 10px 30px;
+  padding: 10px 28px;
   cursor: pointer;
-  color: white;
-  border-radius: 8px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  color: #ffffff;
+  border: 2px solid #428f60;
+  border-radius: 1000px;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 .button:hover {
-  background-color: #3b8056;
+  background-color: #043d5d;
 }
 
 .button--one {
@@ -426,7 +427,6 @@ li {
 .button--footer {
   background-color: #428f60;
   padding: 7px 15px;
-  margin: 0px 15px 30px 15px;
   white-space: nowrap;
 }
 
@@ -456,8 +456,8 @@ li {
   border: 2px solid #FFF;
   border-radius: 50%;
   padding: 10px;
-  -webkit-transition: 0.2;
-  transition: 0.2;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 .icon--footer:hover {
@@ -725,8 +725,8 @@ a {
   margin: 0 0 0 5px;
   font-size: 12px;
   padding: 25px 7px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: ease 0.3s;
+  transition: ease 0.3s;
 }
 
 @media (min-width: 768px) {
@@ -754,12 +754,11 @@ a {
 }
 
 .footer {
-  height: 40%;
   width: 100%;
   text-align: center;
   background-color: #043d5d;
-  padding: 10px;
   margin: 0;
+  padding-top: 5%;
 }
 
 .footer__contact {
@@ -779,11 +778,19 @@ a {
 }
 
 .footer__links {
-  margin: 10px;
+  margin: 3%;
 }
 
 .footer__link {
   padding: 4px;
+}
+
+.footer__name {
+  width: 100%;
+  background-color: #000;
+  opacity: 0.5;
+  padding: 3%;
+  margin: 0;
 }
 
 .section {
