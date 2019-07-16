@@ -404,6 +404,8 @@ li {
   cursor: pointer;
   color: white;
   border-radius: 8px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .button:hover {
@@ -455,6 +457,8 @@ li {
   border: 2px solid #FFF;
   border-radius: 50%;
   padding: 10px;
+  -webkit-transition: 0.2;
+  transition: 0.2;
 }
 
 .icon--footer:hover {
@@ -722,6 +726,8 @@ a {
   margin: 0 0 0 5px;
   font-size: 12px;
   padding: 25px 7px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 @media (min-width: 768px) {
