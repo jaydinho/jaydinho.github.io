@@ -451,18 +451,25 @@ li {
 }
 
 .icon--footer {
-  font-size: 24px;
-  color: #FFF;
-  border: 2px solid #FFF;
-  border-radius: 50%;
-  padding: 10px;
+  font-size: 18px;
+  color: #449bb5;
+  border: 2px solid #449bb5;
+  border-radius: 1000px;
+  padding: 8px;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
 }
 
+@media (min-width: 768px) {
+  .icon--footer {
+    font-size: 24px;
+    padding: 10px;
+  }
+}
+
 .icon--footer:hover {
   color: #043d5d;
-  background-color: #FFF;
+  background-color: #449bb5;
 }
 
 h1 {
