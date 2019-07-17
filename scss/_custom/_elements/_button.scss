@@ -13,6 +13,7 @@
 
 .button:hover {
   background-color: $color-primary;
+  transform: scale(1.075);
 }
 
 .button--one {

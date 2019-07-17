@@ -411,6 +411,8 @@ li {
 
 .button:hover {
   background-color: #043d5d;
+  -webkit-transform: scale(1.075);
+          transform: scale(1.075);
 }
 
 .button--one {
