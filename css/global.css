@@ -337,7 +337,7 @@ template {
 }
 
 /* flexbox */
-.flex--column {
+.flex--column, .about__tile--large {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -366,6 +366,91 @@ template {
           justify-content: center;
 }
 
+.flex--space-around {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* main-axis */
+/* main-axis--start */
+.flex--m1, .flex--m1--c1, .flex--m1--c2, .flex--m1--c3, .flex--m1--c4, .flex--m1--c5 {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+/* main-axis--center*/
+.flex--m2, .flex--m2--c1, .flex--m2--c2, .flex--m2--c3, .flex--m2--c4, .flex--m2--c5 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/* main-axis--end  */
+.flex--m3, .flex--m3--c1, .flex--m3--c2, .flex--m3--c3, .flex--m3--c4, .flex--m3--c5 {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+/* main-axis--space-around */
+.flex--m4, .flex--m4--c1, .flex--m4--c2, .about__tile--large, .flex--m4--c3, .flex--m4--c4, .flex--m4--c5 {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+/* main-axis--space-between */
+.flex--m5, .flex--m5--c1, .flex--m5--c2, .flex--m5--c3, .flex--m5--c4, .flex--m5--c5 {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* cross-axis */
+/* cross-axis--start */
+.flex--c1, .flex--m1--c1, .flex--m2--c1, .flex--m3--c1, .flex--m4--c1, .flex--m5--c1 {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+/* cross-axis--center */
+.flex--c2, .flex--m1--c2, .flex--m2--c2, .flex--m3--c2, .flex--m4--c2, .about__tile--large, .flex--m5--c2 {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/* cross-axis--end */
+.flex--c3, .flex--m1--c3, .flex--m2--c3, .flex--m3--c3, .flex--m4--c3, .flex--m5--c3 {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+/* cross-axis--baseline */
+.flex--c4, .flex--m1--c4, .flex--m2--c4, .flex--m3--c4, .flex--m4--c4, .flex--m5--c4 {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+/* cross-axis--stretch */
+.flex--c5, .flex--m1--c5, .flex--m2--c5, .flex--m3--c5, .flex--m4--c5, .flex--m5--c5 {
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+/* combinations */
+/* m1 */
+/* m2 */
+/* m3 */
+/* m4 */
+/* m5 */
 /* font variables start */
 /* font variables end */
 /* colour variables start */
@@ -390,6 +475,11 @@ body {
 
 li {
   list-style: none;
+  color: #FFF;
+}
+
+.border {
+  border: 5px yellow solid;
 }
 
 /* global styles - end */
@@ -476,25 +566,25 @@ li {
 
 h1 {
   font-family: "Roboto Slab", sans-serif;
-  font-size: 26px;
+  font-size: 38px;
   font-weight: 300;
   margin: 0;
 }
 
 h2 {
-  font-size: 22px;
+  font-size: 25px;
   font-weight: 300;
   margin: 0 0 15px 0;
 }
 
 h3 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
   margin: 10px 0 20px 0;
 }
 
 h4 {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   margin: 10px;
   color: #000;
@@ -508,7 +598,6 @@ h5 {
 p {
   font-size: 12px;
   width: 75%;
-  text-align: center;
 }
 
 a {
@@ -518,16 +607,16 @@ a {
 /* Medium */
 @media (min-width: 768px) {
   h1 {
-    font-size: 34px;
+    font-size: 38px;
   }
   h2 {
-    font-size: 26px;
+    font-size: 32px;
   }
   h3 {
-    font-size: 22px;
+    font-size: 25px;
   }
   h4 {
-    font-size: 16px;
+    font-size: 18px;
   }
   h5 {
     font-size: 18px;
@@ -541,14 +630,14 @@ a {
 /* Large */
 @media (min-width: 1024px) {
   h1 {
-    font-size: 40px;
+    font-size: 50px;
   }
   h2 {
-    font-size: 32px;
+    font-size: 44px;
     margin: 0 0 30px 0;
   }
   h3 {
-    font-size: 22px;
+    font-size: 26px;
   }
   h4 {
     font-size: 20px;
@@ -705,7 +794,7 @@ a {
 .navbar {
   width: 100%;
   height: 60px;
-  background-color: #449bb5;
+  background-color: #043d5d;
   position: fixed;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
@@ -736,6 +825,7 @@ a {
   padding: 25px 7px;
   -webkit-transition: ease 0.3s;
   transition: ease 0.3s;
+  position: relative;
 }
 
 @media (min-width: 768px) {
@@ -755,72 +845,139 @@ a {
 }
 
 .navbar__link:hover {
-  background-color: #043d5d;
+  color: #FFF;
+}
+
+.navbar__link:before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 4px;
+  bottom: 17%;
+  left: 5%;
+  border-radius: 20px;
+  background-color: #449bb5;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar__link:hover:before {
+  visibility: visible;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 .navbar__link--name {
   margin: 0 auto 0 0;
 }
 
-.footer {
-  width: 100%;
-  text-align: center;
-  background-color: #043d5d;
-  margin: 0;
-  padding-top: 5%;
-}
-
-.footer__contact {
-  border-radius: 8px;
-  width: 80%;
-  height: 30vh;
-  margin: 20px;
-  margin-bottom: -15vh;
-}
-
-.contact__text {
-  width: auto;
-}
-
-.footer .button-one {
-  margin: 0 15px;
-}
-
-.footer__links {
-  margin: 3%;
-}
-
-.footer__link {
-  padding: 4px;
-}
-
-.footer__name {
-  width: 100%;
-  background-color: #000;
-  opacity: 0.5;
-  padding: 3%;
-  margin: 0;
-}
-
 .section {
   width: 100%;
 }
 
-/* About section */
-.section__about {
+/* welcome section */
+.section__welcome {
   height: 130vh;
   background-color: #043d5d;
 }
 
-.about__title {
+.welcome__title {
   padding-top: 70px;
 }
 
-.about {
+.welcome {
   margin-top: -30vh;
 }
 
-/* Skills section */
+/* about section */
+#about {
+  padding-top: 4vh;
+}
+
+.section__about {
+  height: 120vh;
+  background-color: #FFF;
+}
+
+.about__section {
+  height: 100vh;
+  width: 100%;
+}
+
+.about__section--blue {
+  background-color: #449bb5;
+}
+
+.about__tile {
+  background-color: #051f2f;
+  border-radius: 8px;
+  border-top: 8px solid #449bb5;
+  padding: 3%;
+}
+
+.about__tile--large {
+  width: auto;
+  height: 70%;
+  margin: 5%;
+}
+
+@media (min-width: 1024px) {
+  .about__tile--large {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+.about__tile--small {
+  background-color: #051f2f;
+  border-top: 8px solid #043d5d;
+  width: 40%;
+  height: 40%;
+  margin: 5%;
+}
+
+.about__text {
+  color: #b3b3b3;
+  width: 95%;
+  margin: 0;
+}
+
+.about__image {
+  position: relative;
+  max-height: 300px;
+  display: block;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .about__image {
+    display: block;
+    max-height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .about__image {
+    display: block;
+    max-height: 500px;
+  }
+}
+
+/* skills section */
 .section__skills {
   background-color: #FFF;
   height: auto;
@@ -828,7 +985,7 @@ a {
 
 #skills {
   padding-top: 10vh;
-  margin-top: -40vh;
+  margin-top: -30vh;
 }
 
 .skills {
@@ -847,8 +1004,6 @@ a {
   .skills {
     border: 2px solid #449bb5;
     height: 470px;
-    -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
   }
 }
 
@@ -989,6 +1144,7 @@ ul {
 .projects__text {
   color: #043d5d;
   font-weight: 400;
+  text-align: center;
 }
 
 .projects-inner {
@@ -1007,6 +1163,46 @@ ul {
   .projects-inner {
     width: 65%;
   }
+}
+
+.footer {
+  height: 60vh;
+  width: 100%;
+  background-color: #043d5d;
+  margin: 0;
+  padding-top: 5%;
+}
+
+.footer__container {
+  width: 90%;
+  height: 83%;
+  margin: 0 5% 5% 5%;
+}
+
+.footer__contact {
+  border-radius: 8px;
+  width: 60%;
+}
+
+.footer .button-one {
+  margin: 0 15px;
+}
+
+.footer__links {
+  width: 25%;
+}
+
+.footer__link {
+  padding: 4px;
+}
+
+.footer__name {
+  width: 94%;
+  background-color: #051f2f;
+  color: #b3b3b3;
+  padding: 3%;
+  margin: 0;
+  text-align: center;
 }
 
 /** ///////////// - _structures.scss - end - ///////////// */

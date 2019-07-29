@@ -1,0 +1,50 @@
+/* Profile link */
+.profile-links {
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    margin: 0;
+  }
+  
+  /* Large */
+  @media (min-width: 1024px) {
+  .profile-links{
+      font-size: 20px;
+    }
+  }
+  
+  /* Projects section */
+  .section__projects {
+    width: 100%;
+    height: auto;
+    background-color: $color-white;
+  }
+  
+  #projects {
+    padding-top: 15vh;
+  }
+  
+  .projects__title {
+    color: #043d5d;
+    font-weight: 400;
+  }
+  
+  .projects__text {
+    color: #043d5d;
+    font-weight: 400;
+    text-align: center;
+  }
+  
+  .projects-inner {
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 50%;
+    margin-bottom: 10vh;
+  }
+
+  @media (min-width: 1024px) {
+    .projects-inner {
+      width: 65%;
+    }
+  }

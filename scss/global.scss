@@ -5,7 +5,7 @@
 
 @import '_dependencies/_normalize';
 
-@import '_custom/flexbox.scss';
+@import '_custom/_flexbox.scss';
 @import '_custom/_variables.scss';
 
 /* - global import - end */
@@ -30,6 +30,11 @@ html {
 
   li {
     list-style: none;
+    color: $color-white;
+  }
+
+  .border {
+    border: 5px yellow solid;
   }
 /* global styles - end */
 

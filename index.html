@@ -29,29 +29,59 @@
   <script src="https://kit.fontawesome.com/084fdc9c62.js"></script>
 </head>
 
-<body id="about">
+<body id="welcome">
   
   <nav class="navbar flex--row" id="navbar">
-    <a class="navbar__link navbar__link--name" href="#about">Jason Short | Aspiring Web Developer</a>
+    <a class="navbar__link navbar__link--name" href="#welcome">Jason Short | Aspiring Web Developer</a>
     <a class="navbar__link" href="#about">About</a>
     <a class="navbar__link" href="#skills">Skills</a>
     <a class="navbar__link" href="#projects">Projects</a>
   </nav>
   
   <div class="flex--column">
-    <div class="section section__about flex--column flex--centered ">
-      <div class="about flex--column flex--centered">
-        <h1 class="about__title">Jason Short</h1>
+    <div class="section section__welcome flex--column flex--centered ">
+      <div class="welcome flex--column flex--centered">
+        <h1 class="welcome__title">Jason Short</h1>
         <h3>Aspiring Web Developer</h3>
         <a href="documents/JasonShortCV.pdf" download="Jason_Short_CV">
           <button class="button button--one">Download CV</button>
         </a>  
       </div>
     </div>
-    
+
+    <div id="about" class="section section__about">
+      <div class="about__section about__section--large flex--centered">
+        <div class="about__tile about__tile--large">
+          <div class="flex--column">
+            <h2>Hi, I'm Jason. Nice to meet you.</h2>
+            <h4 class="about__text">Having worked as a Technical Author in a software development team over the last two years, I've developed a passion for great user experience and clean, simple design.</h4>
+          </div>
+          <img src="images/AboutPhoto.jpeg" alt="Jason Short Photo" class="about__image flex--centered">
+      </div>
+    </div>
+<!--
+      <div class="about__section about__section--blue flex--row flex--m2--c2">
+        <div class="about__tile about__tile--small">
+          <h3>Web Design</h3>
+          <p>Some schpeal about web design</p>
+          <h3>Web Development</h3>
+          <p>Some schpeal about web development</p>
+        </div>
+        <div class="about__tile about__tile--small">
+          <h3>Reading List</h3>
+          <ul>
+            <a href="https://www.goodreads.com/book/show/10361330-html-and-css" target="_blank"><li>HTML & CSS: Design and Build Websites by John Duckett</li></a>
+            <a href="https://www.goodreads.com/book/show/16219704-javascript-and-jquery" target="_blank"><li>JavaScript & JQuery: Interactive Front-End Web Development by John Duckett</li></a>
+            <a href="https://www.goodreads.com/book/show/18197267-don-t-make-me-think-revisited" target="_blank"><li>Don't Make Me Think by Steve Krug</li></a>
+          </ul>
+        </div>
+      </div>
+--> 
+
+  </div>
     <div class="section section__skills flex--column flex--centered">
       
-        <h2 id="skills"></h2>
+        <section id="skills"></section>
         <div class="skills flex--row flex--centered">
           <div class="skills__column skills__column--first flex--column flex--centered">
             <i class="far fa-file-code icon"></i>
@@ -109,7 +139,7 @@
 
     <div class="section section__projects flex--column flex--centered ">
       <div class="projects-container flex--column flex--centered">
-        <h2 class="projects__title" id="projects">Projects</h2>
+        <h3 class="projects__title" id="projects">Projects</h3>
         <p class="projects__text">I'm at the very beginning of my coding journey, but will be adding more projects soon!</p>
         <div class="projects-inner flex--row">
           <a href="blackjack/index.html" target="_blank">
@@ -144,29 +174,43 @@
                   <p class="project-tile-text" >Come back soon to see some new creations.</p>
                 </div>
               </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   
-  <footer class="footer flex--column flex--centered">
-    <h5 class="contact__text">Looking for an apprentice web developer?</h5>
-    <a href="mailto:jasonshort1990@gmail.com?Subject=Job%20Offer" target="_top">
-      <button class="button button--footer">Contact Me</button>
-    </a> 
-    <div class="footer__links flex--row flex--centered">
-    <a class="footer__link" href="https://www.freecodecamp.org/jaydinho" target="_blank">
-      <i class="fab fa-free-code-camp icon icon--footer"></i>
-    </a>
-    <a class="footer__link" href="https://github.com/jaydinho" target="_blank">
-      <i class="fab fa-github icon icon--footer"></i>
-    </a>
-    <a class="footer__link" href="https://codepen.io/Jaydinho/" target="_blank">
-      <i class="fab fa-codepen icon icon--footer"></i>
-    </a>
+  <footer class="footer">
+    <div class="footer__container flex--row flex--m2--c2">
+      <div class="footer__contact flex--column flex--m1--c1">
+        <h3 class="contact__text">Looking for an apprentice web developer?</h3>
+        <a href="mailto:jasonshort1990@gmail.com?Subject=Job%20Offer" target="_top">
+          <button class="button button--footer">Contact Me</button>
+        </a>
+      </div>
+      <div class="footer__links flex--column flex--m1--c1">
+        <div class="flex--row flex--m2--c2">
+          <a class="footer__link" href="https://www.freecodecamp.org/jaydinho" target="_blank">
+            <i class="fab fa-free-code-camp icon icon--footer"></i>
+          </a>
+          <p>FreeCodeCamp</p>
+        </div>
+        <div class="flex--row">
+          <a class="footer__link" href="https://github.com/jaydinho" target="_blank">
+            <i class="fab fa-github icon icon--footer"></i>
+          </a>
+          <p>Github</p>
+        </div>
+        <div class="flex--row">
+          <a class="footer__link" href="https://codepen.io/Jaydinho/" target="_blank">
+            <i class="fab fa-codepen icon icon--footer"></i>
+          </a>
+          <p>Codepen</p>
+        </div>
+      </div>
     </div>
 
-    <p class="footer__name">&copy; Jason Short 2019</p>
+    <div class="footer__name">&copy; Jason Short 2019</div>
+    
   </footer>
   
 </body>

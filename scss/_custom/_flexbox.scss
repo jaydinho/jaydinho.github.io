@@ -1,15 +1,218 @@
 /* flexbox */
 .flex--column {
-    display: flex;
-    flex-direction: column;
-  }
+  display: flex;
+  flex-direction: column;
+}
   
-  .flex--row {
-    display: flex;
-    flex-direction: row;
-  }
+.flex--row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex--row() {
+  display: flex;
+  flex-direction: row;
+}
   
-  .flex--centered {
-    align-items: center;
-    justify-content: center;
-  }  
+.flex--centered {
+  align-items: center;
+  justify-content: center;
+} 
+
+.flex--space-around {
+  align-items: center;
+  justify-content: space-around;
+}
+
+/* main-axis */
+
+/* main-axis--start */
+.flex--m1 {
+  justify-content: flex-start;
+}
+
+/* main-axis--center*/
+.flex--m2 {
+  justify-content: center;
+}
+
+/* main-axis--end  */
+.flex--m3 {
+  justify-content: flex-end;
+}
+
+/* main-axis--space-around */
+.flex--m4 {
+  justify-content: space-around;
+}
+
+/* main-axis--space-between */  
+.flex--m5 {
+  justify-content: space-between;
+}
+
+
+/* cross-axis */
+
+/* cross-axis--start */
+.flex--c1 {
+  align-items: flex-start;
+}
+
+/* cross-axis--center */
+.flex--c2 {
+  align-items: center;
+}
+
+/* cross-axis--end */
+.flex--c3 {
+  align-items: flex-end;
+}
+
+/* cross-axis--baseline */
+.flex--c4 {
+  align-items: baseline;
+}
+
+/* cross-axis--stretch */  
+.flex--c5 {
+  align-items: stretch;
+}
+
+
+/* combinations */
+
+/* m1 */
+.flex--m1--c1 {
+  @extend .flex--m1;
+  @extend .flex--c1;
+}
+
+.flex--m1--c2 {
+  @extend .flex--m1;
+  @extend .flex--c2;
+}
+
+.flex--m1--c3 {
+  @extend .flex--m1;
+  @extend .flex--c3;
+}
+
+.flex--m1--c4 {
+  @extend .flex--m1;
+  @extend .flex--c4;
+}
+
+.flex--m1--c5 {
+  @extend .flex--m1;
+  @extend .flex--c5;
+}
+
+/* m2 */
+.flex--m2--c1 {
+  @extend .flex--m2;
+  @extend .flex--c1;
+}
+
+@mixin flex--m2--c1() {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.flex--m2--c2 {
+  @extend .flex--m2;
+  @extend .flex--c2;
+}
+
+.flex--m2--c3 {
+  @extend .flex--m2;
+  @extend .flex--c3;
+}
+
+.flex--m2--c4 {
+  @extend .flex--m2;
+  @extend .flex--c4;
+}
+
+.flex--m2--c5 {
+  @extend .flex--m2;
+  @extend .flex--c5;
+}
+
+/* m3 */
+.flex--m3--c1 {
+  @extend .flex--m3;
+  @extend .flex--c1;
+}
+
+.flex--m3--c2 {
+  @extend .flex--m3;
+  @extend .flex--c2;
+}
+
+.flex--m3--c3 {
+  @extend .flex--m3;
+  @extend .flex--c3;
+}
+
+.flex--m3--c4 {
+  @extend .flex--m3;
+  @extend .flex--c4;
+}
+
+.flex--m3--c5 {
+  @extend .flex--m3;
+  @extend .flex--c5;
+}
+
+/* m4 */
+.flex--m4--c1 {
+  @extend .flex--m4;
+  @extend .flex--c1;
+}
+
+.flex--m4--c2 {
+  @extend .flex--m4;
+  @extend .flex--c2;
+}
+
+.flex--m4--c3 {
+  @extend .flex--m4;
+  @extend .flex--c3;
+}
+
+.flex--m4--c4 {
+  @extend .flex--m4;
+  @extend .flex--c4;
+}
+
+.flex--m4--c5 {
+  @extend .flex--m4;
+  @extend .flex--c5;
+}
+
+/* m5 */
+.flex--m5--c1 {
+  @extend .flex--m5;
+  @extend .flex--c1;
+}
+
+.flex--m5--c2 {
+  @extend .flex--m5;
+  @extend .flex--c2;
+}
+
+.flex--m5--c3 {
+  @extend .flex--m5;
+  @extend .flex--c3;
+}
+
+.flex--m5--c4 {
+  @extend .flex--m5;
+  @extend .flex--c4;
+}
+
+.flex--m5--c5 {
+  @extend .flex--m5;
+  @extend .flex--c5;
+}
