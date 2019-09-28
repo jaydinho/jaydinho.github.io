@@ -958,7 +958,7 @@ a {
 
 .about__image {
   position: relative;
-  max-height: 300px;
+  max-height: 60%;
   display: block;
   border-radius: 8px;
 }
@@ -1174,7 +1174,7 @@ ul {
 }
 
 .footer__container {
-  width: 90%;
+  width: 80%;
   height: 83%;
   margin: 0 5% 5% 5%;
 }
